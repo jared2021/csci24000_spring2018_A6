@@ -1,1 +1,18 @@
-
+The goal of this assignment is to create a program that will give a sorted list of numbers from a random set of numbers
+The input of this assignment is a file that contains the random set of numbers
+The output of this assignment is those numbers arranged from greatest to lowest
+The file Sort.h will be a abstraction of what InsertionSort and the BubbleSort classes will be 
+Sort.h will be the parent class and a virtual class
+InsertionSort.h and BubbleSort.h will be abstractions for their respective cpp files and will have the methods to be implemented
+InsertionSort.cpp will take an integer array in its constructor to compare the unsorted numbers
+It will have a sorting method that will check the first two elements in the array and put the bigger one in front making a sub-list of the first two elements
+It will then check each preceding element with the sorted sub-list and compare it to see where it goes in the sub-list till it goes through the and compares each number
+It will also have a printing function that will print out the sorted array of numbers out onto the console
+BubbleSort.cpp will also take an integer aray in its constructor to compare the unsorted numbers
+It will have a sorting method that will check the first two elements in the array and put the bigger one in front, and will then check the second and third elements and so on and so forth till it gets to the end of the list
+Afterwords it will repeat this process until it has no more numbers to compare
+It will also have a printing function that will print out the sorted array of numbers out onto the console
+The Driver.cpp file will be what runs the program
+It will have a two menus, the first will have two options 1) Load in a file 2) Exit the program
+If the user enters 1 the program will load in the file and will then bring up the second menu with three options 1) Use Insertion Sort 2) Use Bubble Sort 3) Exit the program 
+If the user enters 1 or 2 the program will sort the numbers in the file using either Insertion or Bubble Sort and will then kick the user back to the first menu and will repeat these steps until the user exits the program
