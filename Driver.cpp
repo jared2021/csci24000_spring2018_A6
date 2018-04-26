@@ -27,6 +27,7 @@ void menu()
 	{
 		std::ifstream File("data.txt");
 		std::stringstream ss;
+		std::stringstream converter;
 		if (File.is_open())
 		{
 			ss.clear();
@@ -38,9 +39,24 @@ void menu()
 			{
 				ss.str(line);
 
-				std::getline(ss,number,',');
+				while(std::getline(ss,number,','))
+				{
+					converter.clear();
+					converter.str("");
+					converter<<number;
+					int temp;
+					converter>>temp;
+					int countdown=0;
+					list[countdown]=temp;
+					countdown=countdown+1;
+				}
 			}
 		}
+	}
+	else if(input=="2")
+	{
+		std::cout<<"Exiting program.";
+		keepGoing=false;
 	}
 }
 int sort()
@@ -66,5 +82,16 @@ int sort()
 	{
 		std::cout<<"Exiting program.";
 		keepGoing=false;
+	}
+}
+int main()
+{
+	while(keepGoing=true)
+	{
+		menu();
+		if(keepGoing=true)
+		{
+			sort();
+		}
 	}
 }
