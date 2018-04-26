@@ -15,7 +15,7 @@
 
 std:: string input;
 std:: string number;
-int list[50];
+int* list[50];
 bool keepGoing=true;
 void menu()
 {
