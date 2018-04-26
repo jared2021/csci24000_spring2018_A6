@@ -15,7 +15,7 @@
 
 std:: string input;
 std:: string number;
-int* list[50];
+int list[50];
 bool keepGoing=true;
 void menu()
 {
@@ -68,13 +68,13 @@ int sort()
 	std::cin>>input;
 	if(input=="1")
 	{
-		InsertionSort* mySort=new InsertionSort( list[50]);
+		InsertionSort* mySort=new InsertionSort( list);
 		(*mySort).Sorting();
 		std::cout<<(*mySort).Print();
 	}
 	else if (input=="2")
 	{
-		BubbleSort* mySort=new BubbleSort(list[50]);
+		BubbleSort* mySort=new BubbleSort(list);
 		(*mySort).Sorting();
 		std::cout<<(*mySort).Print();
 	}
@@ -94,4 +94,5 @@ int main()
 			sort();
 		}
 	}
+	return 0;
 }
