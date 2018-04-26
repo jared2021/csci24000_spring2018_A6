@@ -4,19 +4,19 @@
 #received any help on this assignment
 #
 #jascho
-all:driver
+all:Driver
 
-driver:InsertionSort.o BubbleSort.o Driver.cpp
-	g++ InsertionSort.o BubbleSort.o -o driver
+Driver:InsertionSort.o BubbleSort.o Driver.cpp
+	g++ InsertionSort.o BubbleSort.o -o Driver
 
-InsertionSort.o: InsertionSort.cpp InsertionSort.h
-	g++ -c InsertionSort.cpp
+InsertionSort.o: InsertionSort.cpp 
+	g++ -c InsertionSort.cpp -o InsertionSort.o
 
-BubbleSort.o: BubbleSort.cpp BubbleSort.h
-	g++ -c BubbleSort.cpp
+BubbleSort.o: BubbleSort.cpp 
+	g++ -c BubbleSort.cpp -o BubbleSort.o
 
 clean:
-	rm *.o
+	rm -f BubbleSort.o InsertionSort.o Driver
 
 run:
 	./driver
