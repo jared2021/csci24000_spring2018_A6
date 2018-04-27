@@ -1,0 +1,8 @@
+The Big-o analysis of a algorithm is essentially an estimated calculation of how many times a program will go through each line
+It also calculates how long it will take the program to run in the best and worst circumstances
+For the Insertion sort best case scenario the best it will run will be when the numbers are already sorted
+In terms of Big-o analysis the Insertion sort's best case scenario is O(n)
+What this means is that for each line the driving force of how long the program will run is how many variables there are in the list we are sorting
+The worst case scenario for Insertion sort is O(n^2)
+This means that for each line the driving force of the runtime of the program will be the number of variables there are in the list we are sorting squared
+The best case for BubbleSort is also O(n) and the worst case for Bubblesort is also O(n^2)
