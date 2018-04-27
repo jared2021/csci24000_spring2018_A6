@@ -20,8 +20,6 @@ std:: string number;
 int list[50];
 //boolean variable used to stop the program
 bool keepGoing=true;
-//variable to help store numbers in the array above
-int countdown=0;
 void menu()
 {
 	//prints out a menu
@@ -40,6 +38,8 @@ void menu()
 		{
 			ss.clear();
 			ss.str("");
+			//variable to help store numbers in the list array
+			int countdown=0;
 
 			std::string line;
 			//while it's reading the line from the file it will put the line in the stringstream
