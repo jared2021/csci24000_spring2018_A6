@@ -10,8 +10,8 @@
 class Sort
 {
 	public:
-		virtual void Sorting()=0;
-		virtual int Print()=0;
+		virtual void Sorting(int* array)=0;
+		virtual void Print(int* array)=0;
 };
 
 #endif	

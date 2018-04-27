@@ -10,12 +10,6 @@
 
 InsertionSort::InsertionSort()
 {
-
-}
-
-InsertionSort::InsertionSort(int array[])
-{
-	list[50]=array[50];
 	compare=1;
 	next=2;
 	sublist=0;
@@ -27,28 +21,29 @@ InsertionSort::~InsertionSort()
 
 }
 
-void InsertionSort::Sorting()
+void InsertionSort::Sorting(int* array)
 {
-	if(list[0]<list[1])
+	if(array[0]<array[1])
 	{
-		temp=list[0];
-		list[0]=list[1];
-		list[1]=temp;
+		temp=array[0];
+		array[0]=array[1];
+		array[1]=temp;
 	}
 	while(compare!=50)
 	{
-		if(list[compare]<list[next])
+		std::cout << compare << '\n';
+		if(array[compare]<array[next])
 		{
-			temp=list[compare];
-			list[compare]=list[next];
-			list[next]=temp;
+			temp=array[compare];
+			array[compare]=array[next];
+			array[next]=temp;
 			while (sublist!=-1)
 			{
-				if(list[sublist]<list[compare])
+				if(array[sublist]<array[compare])
 				{
-					temp=list[sublist];
-					list[compare]=list[sublist];
-					list[next]=temp;
+					temp=array[sublist];
+					array[compare]=array[sublist];
+					array[next]=temp;
 					sublist=sublist-1;
 					compare=compare-1;
 				}
@@ -58,8 +53,12 @@ void InsertionSort::Sorting()
 		next=next+1;
 		sublist=compare-1;
 	}
+	Print(array);
 }
-int InsertionSort::Print()
+void InsertionSort::Print(int* array)
 {
-	return list[50];
+	for(int i=0; i<50;++i)
+	{
+		std::cout<<array[i]<<'\n';
+	}
 }

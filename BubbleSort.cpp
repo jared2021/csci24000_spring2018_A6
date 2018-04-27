@@ -10,12 +10,6 @@
 
 BubbleSort::BubbleSort()
 {
-	
-}
-
-BubbleSort::BubbleSort(int array[])
-{
-	list[50]=array[50];
 	compare=0;
 	next=1;
 	end=50;
@@ -27,17 +21,18 @@ BubbleSort::~BubbleSort()
 
 }
 
-void BubbleSort::Sorting()
+void BubbleSort::Sorting(int* array)
 {
 	while(end!=0)
 	{
 		while(next!=end)
 		{
-			if(list[compare]<list[next])
+			if(array[compare]<array[next])
 			{
-				temp=list[compare];
-				list[compare]=list[next];
-				list[next]=temp;
+				std::cout<<"Comparing numbers";
+				temp=array[compare];
+				array[compare]=array[next];
+				array[next]=temp;
 				compare=compare+1;
 				next=next+1;
 			}
@@ -46,8 +41,13 @@ void BubbleSort::Sorting()
 		compare=0;
 		next=1;
 	}
+	Print(array);
 }
-int BubbleSort::Print()
+void BubbleSort::Print(int* array)
 {
-	return list[50];
+	for(int i=0;i<50;++i)
+	{
+		std::cout<<array[i];
+	}
+	std::cout << std::endl;
 }

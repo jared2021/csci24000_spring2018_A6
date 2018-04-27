@@ -6,8 +6,8 @@
 #jascho
 all:Driver
 
-Driver:InsertionSort.o BubbleSort.o Driver.cpp
-	g++ InsertionSort.o BubbleSort.o Driver.cpp -o Driver
+Driver:InsertionSort.o BubbleSort.o Sort.h Driver.cpp
+	g++ InsertionSort.o BubbleSort.o Sort.h Driver.cpp -o Driver
 
 InsertionSort.o: InsertionSort.cpp InsertionSort.h 
 	g++ -c InsertionSort.cpp -o InsertionSort.o

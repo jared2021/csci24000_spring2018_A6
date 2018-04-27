@@ -16,16 +16,14 @@ class BubbleSort : public Sort
 		int compare;
 		int next;
 		int end;
-		int list[50];
 		int temp;
 	public:
 		BubbleSort();
-		BubbleSort(int array[]);
 
 		~BubbleSort();
 
-		virtual void Sorting();
-		virtual int Print();
+		virtual void Sorting(int* array);
+		virtual void Print(int* array);
 };
 
 #endif

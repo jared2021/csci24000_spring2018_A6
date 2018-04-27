@@ -17,6 +17,7 @@ std:: string input;
 std:: string number;
 int list[50];
 bool keepGoing=true;
+int countdown=0;
 void menu()
 {
 	std::cout << "1) Read in file\n";
@@ -46,18 +47,24 @@ void menu()
 					converter<<number;
 					int temp;
 					converter>>temp;
-					int countdown=0;
 					list[countdown]=temp;
 					countdown=countdown+1;
 				}
 			}
+			for(int i = 0; i < 50; ++i)
+			{
+				std::cout << list[i] << " ";
+			}
+			std::cout << std::endl;
 		}
+		std::cout<<"Downloaded the file.\n";
 	}
 	else if(input=="2")
 	{
-		std::cout<<"Exiting program.";
+		std::cout<<"Exiting program.\n";
 		keepGoing=false;
 	}
+	
 }
 int sort()
 {
@@ -68,15 +75,16 @@ int sort()
 	std::cin>>input;
 	if(input=="1")
 	{
-		InsertionSort* mySort=new InsertionSort( list);
-		(*mySort).Sorting();
-		std::cout<<(*mySort).Print();
+		Sort* mySort=new InsertionSort();
+		mySort->Sorting(list);
+		delete mySort;
 	}
 	else if (input=="2")
 	{
-		BubbleSort* mySort=new BubbleSort(list);
-		(*mySort).Sorting();
-		std::cout<<(*mySort).Print();
+		std::cout<<"Creating BubbleSort";
+		//Sort* mySort=new BubbleSort();
+		//mySort->Sorting(list);
+		//delete mySort;
 	}
 	else if (input=="3")
 	{
@@ -86,10 +94,10 @@ int sort()
 }
 int main()
 {
-	while(keepGoing=true)
+	while(keepGoing)
 	{
 		menu();
-		if(keepGoing=true)
+		if(keepGoing)
 		{
 			sort();
 		}

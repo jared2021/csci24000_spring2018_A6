@@ -16,17 +16,15 @@ class InsertionSort : public Sort
 		int compare;
 		int next;
 		int sublist;
-		int list[50];
 		int temp;
 	public:
 
 		InsertionSort();
-		InsertionSort(int array[]);
 
 		~InsertionSort();
 
-		virtual void Sorting();
-		virtual int Print();
+		virtual void Sorting(int* array);
+		virtual void Print(int* array);
 };
 
 #endif
