@@ -10,55 +10,52 @@
 
 InsertionSort::InsertionSort()
 {
-	compare=1;
-	next=2;
-	sublist=0;
 	temp=0;
 }
 
 InsertionSort::~InsertionSort()
 {
-
+	
 }
 
 void InsertionSort::Sorting(int* array)
 {
+	//checking to see if the first two numbers need to be switched
 	if(array[0]<array[1])
 	{
 		temp=array[0];
 		array[0]=array[1];
 		array[1]=temp;
 	}
-	while(compare!=50)
+	//for loop to check each number to see if they need to be switched
+	for(int i=1;i<50;i++)
 	{
-		std::cout << compare << '\n';
-		if(array[compare]<array[next])
+		if(array[i]<array[i+1])
 		{
-			temp=array[compare];
-			array[compare]=array[next];
-			array[next]=temp;
-			while (sublist!=-1)
+			temp=array[i];
+			array[i]=array[i+1];
+			array[i+1]=temp;
+			//checks to see if the number in array[i] should be swapped with another number in the sub-list
+			for(int b=i;b>0;b--)
 			{
-				if(array[sublist]<array[compare])
+				if(array[b-1]<array[b])
 				{
-					temp=array[sublist];
-					array[compare]=array[sublist];
-					array[next]=temp;
-					sublist=sublist-1;
-					compare=compare-1;
+					temp=array[b-1];
+					array[b-1]=array[b];
+					array[b]=temp;
 				}
 			}
 		}
-		compare=next;
-		next=next+1;
-		sublist=compare-1;
 	}
+		
 	Print(array);
 }
 void InsertionSort::Print(int* array)
 {
+	//prints out each element of the array
 	for(int i=0; i<50;++i)
 	{
-		std::cout<<array[i]<<'\n';
+		std::cout<<array[i]<<",";
 	}
+	std::cout<<"\n";
 }

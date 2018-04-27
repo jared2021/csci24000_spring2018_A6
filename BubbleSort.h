@@ -13,9 +13,7 @@
 class BubbleSort : public Sort
 {
 	private:
-		int compare;
-		int next;
-		int end;
+		//variable to hold a number when swapping two numbers
 		int temp;
 	public:
 		BubbleSort();

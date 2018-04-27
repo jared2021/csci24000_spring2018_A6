@@ -13,9 +13,7 @@
 class InsertionSort : public Sort
 {
 	private:
-		int compare;
-		int next;
-		int sublist;
+		//variable to hold one of the numbers in the array if they need to swap numbers
 		int temp;
 	public:
 

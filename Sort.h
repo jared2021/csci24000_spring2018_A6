@@ -10,6 +10,7 @@
 class Sort
 {
 	public:
+		//methods that I will instanciate in my InsertionSort.cpp and BubbleSort.cpp files
 		virtual void Sorting(int* array)=0;
 		virtual void Print(int* array)=0;
 };

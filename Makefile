@@ -22,4 +22,4 @@ run:
 	./Driver
 
 valgrind:
-	valgrind --leak-check=full --log-file=valgrind.txt ./driver
+	valgrind --leak-check=full --log-file=valgrind.txt ./Driver
